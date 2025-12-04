@@ -1,0 +1,714 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unnerfed Levels List</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2bc2c09f-5758-80dc-a83e-ef180fcda17f" class="page sans"><header><h1 class="page-title">Unnerfed Levels List</h1><p class="page-description"></p></header><div class="page-body"><div id="2bc2c09f-5758-80a1-a1e7-f028544046e5" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Name</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>URL</th></tr></thead><tbody><tr id="2bc2c09f-5758-80be-af00-d378a07e7c87"><td class="cell-title"><a href="https://www.notion.so/1-Unnerfed-Arcturus-Old-Version-2bc2c09f575880beaf00d378a07e7c87?pvs=21">1. Unnerfed Arcturus (Old Version)</a></td><td class="cell-llJE"><a href="https://youtu.be/qi5622PJg9Q" class="url-value">https://youtu.be/qi5622PJg9Q</a></td></tr><tr id="2bc2c09f-5758-80af-8e25-d08181b41947"><td class="cell-title"><a href="https://www.notion.so/2-Unnerfed-Silent-Circles-2bc2c09f575880af8e25d08181b41947?pvs=21">2. Unnerfed Silent Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/gJlP-V1DCfo" class="url-value">https://youtu.be/gJlP-V1DCfo</a></td></tr><tr id="2bc2c09f-5758-80f9-be8a-efd18e1e932f"><td class="cell-title"><a href="https://www.notion.so/3-Unnerfed-LastTheory-2bc2c09f575880f9be8aefd18e1e932f?pvs=21">3. Unnerfed LastTheory</a></td><td class="cell-llJE"><a href="https://youtu.be/mApBuDc6Thg" class="url-value">https://youtu.be/mApBuDc6Thg</a></td></tr><tr id="2bc2c09f-5758-80db-be8a-eb0414f01fc4"><td class="cell-title"><a href="https://www.notion.so/4-Unnerfed-La-magicienne-Rose-2bc2c09f575880dbbe8aeb0414f01fc4?pvs=21">4. Unnerfed La magicienne Rose</a></td><td class="cell-llJE"><a href="https://youtu.be/rDb65B39g6g" class="url-value">https://youtu.be/rDb65B39g6g</a></td></tr><tr id="2bc2c09f-5758-805f-8d76-eb808f9456d9"><td class="cell-title"><a href="https://www.notion.so/5-Unnerfed-Realm-of-Bloodshadow-2bc2c09f5758805f8d76eb808f9456d9?pvs=21">5. Unnerfed Realm of Bloodshadow </a></td><td class="cell-llJE"><a href="https://youtu.be/H8dXgd_g3uI" class="url-value">https://youtu.be/H8dXgd_g3uI</a></td></tr><tr id="2bc2c09f-5758-806d-a768-c8bed0c27894"><td class="cell-title"><a href="https://www.notion.so/6-Unnerfed-Goldenous-2bc2c09f5758806da768c8bed0c27894?pvs=21">6. Unnerfed Goldenous</a></td><td class="cell-llJE"><a href="https://youtu.be/UEM2h1OLEuQ" class="url-value">https://youtu.be/UEM2h1OLEuQ</a></td></tr><tr id="2bc2c09f-5758-80e9-b606-c59d0583ee6b"><td class="cell-title"><a href="https://www.notion.so/7-Unnerfed-Lucidia-2bc2c09f575880e9b606c59d0583ee6b?pvs=21">7. Unnerfed Lucidia</a></td><td class="cell-llJE"><a href="https://youtu.be/8mqG9qISurY" class="url-value">https://youtu.be/8mqG9qISurY</a></td></tr><tr id="2bc2c09f-5758-8090-b1c4-d1ccdd69e65d"><td class="cell-title"><a href="https://www.notion.so/8-Unnerfed-Haunted-Corridor-2bc2c09f57588090b1c4d1ccdd69e65d?pvs=21">8. Unnerfed Haunted Corridor</a></td><td class="cell-llJE"><a href="https://youtu.be/JHC2QpOcArc" class="url-value">https://youtu.be/JHC2QpOcArc</a></td></tr><tr id="2bc2c09f-5758-8080-ad79-db29ba954f41"><td class="cell-title"><a href="https://www.notion.so/9-Unnerfed-Cyber-Raptor-2bc2c09f57588080ad79db29ba954f41?pvs=21">9. Unnerfed Cyber Raptor</a></td><td class="cell-llJE"><a href="https://youtu.be/A-QbAoYh5SI" class="url-value">https://youtu.be/A-QbAoYh5SI</a></td></tr><tr id="2bc2c09f-5758-80b4-a2d0-dd30fe99af20"><td class="cell-title"><a href="https://www.notion.so/10-Unnerfed-ANGELICIDE-2bc2c09f575880b4a2d0dd30fe99af20?pvs=21">10. Unnerfed ANGELICIDE</a></td><td class="cell-llJE"><a href="https://youtu.be/r9tKrnX4QsQ" class="url-value">https://youtu.be/r9tKrnX4QsQ</a></td></tr><tr id="2bc2c09f-5758-800f-aa6e-e2e8001fe4b5"><td class="cell-title"><a href="https://www.notion.so/11-Unnerfed-The-Devil-2bc2c09f5758800faa6ee2e8001fe4b5?pvs=21">11. Unnerfed The Devil</a></td><td class="cell-llJE"><a href="https://youtu.be/zQXLi6fJ85Q" class="url-value">https://youtu.be/zQXLi6fJ85Q</a></td></tr><tr id="2bc2c09f-5758-803d-b572-de1af87994e5"><td class="cell-title"><a href="https://www.notion.so/12-Unnerfed-Unnamed-666-2bc2c09f5758803db572de1af87994e5?pvs=21">12. Unnerfed Unnamed 666</a></td><td class="cell-llJE"><a href="https://youtu.be/YFMHeex1Ypw" class="url-value">https://youtu.be/YFMHeex1Ypw</a></td></tr><tr id="2bc2c09f-5758-80b0-9dca-ec7911d5102c"><td class="cell-title"><a href="https://www.notion.so/13-Unnerfed-Sakupen-World-2bc2c09f575880b09dcaec7911d5102c?pvs=21">13. Unnerfed Sakupen World </a></td><td class="cell-llJE"><a href="https://youtu.be/yG-I9CvZ7Po" class="url-value">https://youtu.be/yG-I9CvZ7Po</a></td></tr><tr id="2bc2c09f-5758-80ef-a508-f1b3de8a0500"><td class="cell-title"><a href="https://www.notion.so/14-Unnerfed-Silent-Dry-2bc2c09f575880efa508f1b3de8a0500?pvs=21">14. Unnerfed Silent Dry</a></td><td class="cell-llJE"><a href="https://youtu.be/z4ywBsYiZF0" class="url-value">https://youtu.be/z4ywBsYiZF0</a></td></tr><tr id="2bc2c09f-5758-8008-8444-cc5e03e2a983"><td class="cell-title"><a href="https://www.notion.so/15-Unnerfed-Funstep-2bc2c09f575880088444cc5e03e2a983?pvs=21">15. Unnerfed Funstep</a></td><td class="cell-llJE"><a href="https://youtu.be/YgG6bVC01L0" class="url-value">https://youtu.be/YgG6bVC01L0</a></td></tr><tr id="2bc2c09f-5758-8038-bdc7-f3d660011210"><td class="cell-title"><a href="https://www.notion.so/16-Unnerfed-Ancient-Pyramid-2bc2c09f57588038bdc7f3d660011210?pvs=21">16. Unnerfed Ancient Pyramid</a></td><td class="cell-llJE"><a href="https://youtu.be/pEMVtW-5gCg" class="url-value">https://youtu.be/pEMVtW-5gCg</a></td></tr><tr id="2bc2c09f-5758-80ad-b0ca-c72e136daeee"><td class="cell-title"><a href="https://www.notion.so/17-Unnerfed-Septa-Never-Clear-2bc2c09f575880adb0cac72e136daeee?pvs=21">17. Unnerfed Septa Never Clear </a></td><td class="cell-llJE"><a href="https://youtu.be/XbOMaA33It4" class="url-value">https://youtu.be/XbOMaA33It4</a></td></tr><tr id="2bc2c09f-5758-8085-b8bb-cf2be277ea95"><td class="cell-title"><a href="https://www.notion.so/18-Unnerfed-Lanto-2bc2c09f57588085b8bbcf2be277ea95?pvs=21">18. Unnerfed Lanto </a></td><td class="cell-llJE"><a href="https://youtu.be/jrI5LLT8sNw" class="url-value">https://youtu.be/jrI5LLT8sNw</a></td></tr><tr id="2bc2c09f-5758-80a3-b6ea-cf1b044b6dff"><td class="cell-title"><a href="https://www.notion.so/19-Unnerfed-Mercury-2bc2c09f575880a3b6eacf1b044b6dff?pvs=21">19. Unnerfed Mercury</a></td><td class="cell-llJE"><a href="https://youtu.be/oMDrkaI4xUg" class="url-value">https://youtu.be/oMDrkaI4xUg</a></td></tr><tr id="2bc2c09f-5758-807c-a772-dc65693b93da"><td class="cell-title"><a href="https://www.notion.so/20-Unnerfed-Crimson-Clutter-Infinity-2bc2c09f5758807ca772dc65693b93da?pvs=21">20. Unnerfed Crimson Clutter Infinity</a></td><td class="cell-llJE"><a href="https://youtu.be/Dekpz1ETIns" class="url-value">https://youtu.be/Dekpz1ETIns</a></td></tr><tr id="2bc2c09f-5758-804f-bfbd-d57bc680f41c"><td class="cell-title"><a href="https://www.notion.so/21-Unnerfed-Cringe-Rush-X-2bc2c09f5758804fbfbdd57bc680f41c?pvs=21">21. Unnerfed Cringe Rush X </a></td><td class="cell-llJE"><a href="https://youtu.be/6r6BErZt8yQ" class="url-value">https://youtu.be/6r6BErZt8yQ</a></td></tr><tr id="2bc2c09f-5758-802c-9555-fca84440deba"><td class="cell-title"><a href="https://www.notion.so/22-Unnerfed-Asterios-2bc2c09f5758802c9555fca84440deba?pvs=21">22. Unnerfed Asterios</a></td><td class="cell-llJE"><a href="https://youtu.be/Ajw8z9XJsZc" class="url-value">https://youtu.be/Ajw8z9XJsZc</a></td></tr><tr id="2bc2c09f-5758-8062-a5be-cc2ac97f246e"><td class="cell-title"><a href="https://www.notion.so/23-Unnerfed-Dark-Star-2bc2c09f57588062a5becc2ac97f246e?pvs=21">23. Unnerfed Dark Star</a></td><td class="cell-llJE"><a href="https://youtu.be/3AvC8W9sYRE" class="url-value">https://youtu.be/3AvC8W9sYRE</a></td></tr><tr id="2bc2c09f-5758-8022-a034-f8f41a6ca235"><td class="cell-title"><a href="https://www.notion.so/24-Unnerfed-Immortality-X-2bc2c09f57588022a034f8f41a6ca235?pvs=21">24. Unnerfed Immortality X</a></td><td class="cell-llJE"><a href="https://youtu.be/-wIqIb4O7so" class="url-value">https://youtu.be/-wIqIb4O7so</a></td></tr><tr id="2bc2c09f-5758-80dd-a681-e3005010c975"><td class="cell-title"><a href="https://www.notion.so/25-Unnerfed-Wave-Challenge-2bc2c09f575880dda681e3005010c975?pvs=21">25. Unnerfed Wave Challenge</a></td><td class="cell-llJE"><a href="https://youtu.be/vaW-WspjrN0" class="url-value">https://youtu.be/vaW-WspjrN0</a></td></tr><tr id="2bc2c09f-5758-8020-9034-d93fbb40d395"><td class="cell-title"><a href="https://www.notion.so/26-Unnerfed-ProblematiX-2bc2c09f575880209034d93fbb40d395?pvs=21">26. Unnerfed ProblematiX</a></td><td class="cell-llJE"><a href="https://youtu.be/Ltijj6VO6s4" class="url-value">https://youtu.be/Ltijj6VO6s4</a></td></tr><tr id="2bc2c09f-5758-8029-b920-d3aacb225f0d"><td class="cell-title"><a href="https://www.notion.so/27-Unnerfed-Midnight-2bc2c09f57588029b920d3aacb225f0d?pvs=21">27. Unnerfed Midnight</a></td><td class="cell-llJE"><a href="https://youtu.be/3RCHS_ikJqU" class="url-value">https://youtu.be/3RCHS_ikJqU</a></td></tr><tr id="2bc2c09f-5758-8028-9121-e019ed21a7b5"><td class="cell-title"><a href="https://www.notion.so/28-Unnerfed-Abattoir-2bc2c09f575880289121e019ed21a7b5?pvs=21">28. Unnerfed Abattoir</a></td><td class="cell-llJE"><a href="https://youtu.be/dCdi9lojiCo" class="url-value">https://youtu.be/dCdi9lojiCo</a></td></tr><tr id="2bc2c09f-5758-8019-bc5e-d4c0ea4d81ec"><td class="cell-title"><a href="https://www.notion.so/29-Unnerfed-Dawn-2bc2c09f57588019bc5ed4c0ea4d81ec?pvs=21">29. Unnerfed Dawn</a></td><td class="cell-llJE"><a href="https://youtu.be/Jg8STz1nUCE" class="url-value">https://youtu.be/Jg8STz1nUCE</a></td></tr><tr id="2bc2c09f-5758-80cf-ad6a-cc2550128224"><td class="cell-title"><a href="https://www.notion.so/30-Unnerfed-Hush-2bc2c09f575880cfad6acc2550128224?pvs=21">30. Unnerfed Hush</a></td><td class="cell-llJE"><a href="https://youtu.be/2fNljJc88uw" class="url-value">https://youtu.be/2fNljJc88uw</a></td></tr><tr id="2bc2c09f-5758-80ea-8eee-ca9112a5894a"><td class="cell-title"><a href="https://www.notion.so/31-Unnerfed-Silent-Clubstep-2bc2c09f575880ea8eeeca9112a5894a?pvs=21">31. Unnerfed Silent Clubstep</a></td><td class="cell-llJE"><a href="https://youtu.be/mTkrql917bE" class="url-value">https://youtu.be/mTkrql917bE</a></td></tr><tr id="2bc2c09f-5758-801b-974f-c1a96a0a6e91"><td class="cell-title"><a href="https://www.notion.so/32-Unnerfed-Theory-of-Nothing-2bc2c09f5758801b974fc1a96a0a6e91?pvs=21">32. Unnerfed Theory of Nothing</a></td><td class="cell-llJE"><a href="https://youtu.be/rqYwTEtxwOs" class="url-value">https://youtu.be/rqYwTEtxwOs</a></td></tr><tr id="2bc2c09f-5758-80fc-a1ee-c33b8e620ae6"><td class="cell-title"><a href="https://www.notion.so/33-Unnerfed-Knights-of-Thunder-2bc2c09f575880fca1eec33b8e620ae6?pvs=21">33. Unnerfed Knights of Thunder</a></td><td class="cell-llJE"><a href="https://youtu.be/0DSHb_XXTv8" class="url-value">https://youtu.be/0DSHb_XXTv8</a></td></tr><tr id="2bc2c09f-5758-80d1-afed-f2a4267e7c0b"><td class="cell-title"><a href="https://www.notion.so/34-Unnerfed-IT-MEANS-EVERYTHING-2bc2c09f575880d1afedf2a4267e7c0b?pvs=21">34. Unnerfed IT MEANS EVERYTHING</a></td><td class="cell-llJE"><a href="https://youtu.be/9nSkkXZ628E" class="url-value">https://youtu.be/9nSkkXZ628E</a></td></tr><tr id="2bc2c09f-5758-80a7-831c-fa13a32e517f"><td class="cell-title"><a href="https://www.notion.so/35-Unnerfed-Lightning-Glare-2bc2c09f575880a7831cfa13a32e517f?pvs=21">35. Unnerfed Lightning Glare</a></td><td class="cell-llJE"><a href="https://youtu.be/vquDkjRHXDk" class="url-value">https://youtu.be/vquDkjRHXDk</a></td></tr><tr id="2bc2c09f-5758-801f-84b3-dc010d4d18e5"><td class="cell-title"><a href="https://www.notion.so/36-Unnerfed-Black-Darkness-2bc2c09f5758801f84b3dc010d4d18e5?pvs=21">36. Unnerfed Black Darkness</a></td><td class="cell-llJE"><a href="https://youtu.be/G1EomgbXwPA" class="url-value">https://youtu.be/G1EomgbXwPA</a></td></tr><tr id="2bc2c09f-5758-80bd-ac95-d43f312e93a7"><td class="cell-title"><a href="https://www.notion.so/37-Unnerfed-Silent-Acropolis-2bc2c09f575880bdac95d43f312e93a7?pvs=21">37. Unnerfed Silent Acropolis</a></td><td class="cell-llJE"><a href="https://youtu.be/PZ6EjmesjVE" class="url-value">https://youtu.be/PZ6EjmesjVE</a></td></tr><tr id="2bc2c09f-5758-804f-a986-f44c81ae520b"><td class="cell-title"><a href="https://www.notion.so/38-Unnerfed-Waveligt-2bc2c09f5758804fa986f44c81ae520b?pvs=21">38. Unnerfed Waveligt</a></td><td class="cell-llJE"><a href="https://youtu.be/klhHd2ltyP4" class="url-value">https://youtu.be/klhHd2ltyP4</a></td></tr><tr id="2bc2c09f-5758-80d7-b136-c203c09d94ea"><td class="cell-title"><a href="https://www.notion.so/39-Unnerfed-APOCALYPTIC-TRILOGY-2bc2c09f575880d7b136c203c09d94ea?pvs=21">39. Unnerfed APOCALYPTIC TRILOGY</a></td><td class="cell-llJE"><a href="https://youtu.be/HSldQHP8bcM" class="url-value">https://youtu.be/HSldQHP8bcM</a></td></tr><tr id="2bc2c09f-5758-8008-ab42-e9f7fea50a2d"><td class="cell-title"><a href="https://www.notion.so/40-Unnerfed-Drown-2bc2c09f57588008ab42e9f7fea50a2d?pvs=21">40. Unnerfed Drown</a></td><td class="cell-llJE"><a href="https://youtu.be/wiyh6UepJIc" class="url-value">https://youtu.be/wiyh6UepJIc</a></td></tr><tr id="2bc2c09f-5758-8025-ab41-f2237950048b"><td class="cell-title"><a href="https://www.notion.so/41-Unnerfed-Rainy-2bc2c09f57588025ab41f2237950048b?pvs=21">41. Unnerfed Rainy</a></td><td class="cell-llJE"><a href="https://youtu.be/F8kLhfmx1B4" class="url-value">https://youtu.be/F8kLhfmx1B4</a></td></tr><tr id="2bc2c09f-5758-8042-a9af-ccaaa6f5b24a"><td class="cell-title"><a href="https://www.notion.so/42-Unnerfed-Escalator-2bc2c09f57588042a9afccaaa6f5b24a?pvs=21">42. Unnerfed Escalator</a></td><td class="cell-llJE"><a href="https://youtu.be/WuMx9cR4SBk" class="url-value">https://youtu.be/WuMx9cR4SBk</a></td></tr><tr id="2bc2c09f-5758-80e3-91b3-dca4333a4069"><td class="cell-title"><a href="https://www.notion.so/43-Unnerfed-Leaves-2bc2c09f575880e391b3dca4333a4069?pvs=21">43. Unnerfed Leaves</a></td><td class="cell-llJE"><a href="https://youtu.be/jmUE2fxdHpQ" class="url-value">https://youtu.be/jmUE2fxdHpQ</a></td></tr><tr id="2bc2c09f-5758-8098-ad9a-cd954d8c50ce"><td class="cell-title"><a href="https://www.notion.so/44-Unnerfed-Vacancy-2bc2c09f57588098ad9acd954d8c50ce?pvs=21">44. Unnerfed Vacancy</a></td><td class="cell-llJE"><a href="https://youtu.be/kI0FARYDEkw" class="url-value">https://youtu.be/kI0FARYDEkw</a></td></tr><tr id="2bc2c09f-5758-802a-8540-d76743da3ffe"><td class="cell-title"><a href="https://www.notion.so/45-Unnerfed-Silent-Wet-In-2bc2c09f5758802a8540d76743da3ffe?pvs=21">45. Unnerfed Silent Wet In</a></td><td class="cell-llJE"><a href="https://youtu.be/vf0D9E0hlDA" class="url-value">https://youtu.be/vf0D9E0hlDA</a></td></tr><tr id="2bc2c09f-5758-8014-aa50-d75098f411a1"><td class="cell-title"><a href="https://www.notion.so/46-Unnerfed-Arcansil-2bc2c09f57588014aa50d75098f411a1?pvs=21">46. Unnerfed Arcansil</a></td><td class="cell-llJE"><a href="https://youtu.be/h0IrMhrYXGo" class="url-value">https://youtu.be/h0IrMhrYXGo</a></td></tr><tr id="2bc2c09f-5758-8082-880b-f4d83d829bb7"><td class="cell-title"><a href="https://www.notion.so/47-Unnerfed-Abyss-2bc2c09f57588082880bf4d83d829bb7?pvs=21">47. Unnerfed Abyss</a></td><td class="cell-llJE"><a href="https://youtu.be/VJSFx2rbRCI" class="url-value">https://youtu.be/VJSFx2rbRCI</a></td></tr><tr id="2bc2c09f-5758-8041-a0c6-efe37e17fa56"><td class="cell-title"><a href="https://www.notion.so/48-Unnerfed-Poocubed-2bc2c09f57588041a0c6efe37e17fa56?pvs=21">48. Unnerfed Poocubed</a></td><td class="cell-llJE"><a href="https://youtu.be/mMALW3kj6n4" class="url-value">https://youtu.be/mMALW3kj6n4</a></td></tr><tr id="2bc2c09f-5758-80e5-bc20-dbb6f3b4ccf0"><td class="cell-title"><a href="https://www.notion.so/49-Unnerfed-Hollow-2bc2c09f575880e5bc20dbb6f3b4ccf0?pvs=21">49. Unnerfed Hollow</a></td><td class="cell-llJE"><a href="https://youtu.be/fuc0iOTuApU" class="url-value">https://youtu.be/fuc0iOTuApU</a></td></tr><tr id="2bc2c09f-5758-807d-a9f8-d9e23de5ad73"><td class="cell-title"><a href="https://www.notion.so/50-Unnerfed-Vertigo-2bc2c09f5758807da9f8d9e23de5ad73?pvs=21">50. Unnerfed Vertigo</a></td><td class="cell-llJE"><a href="https://youtu.be/kVCL-dW7HVk" class="url-value">https://youtu.be/kVCL-dW7HVk</a></td></tr><tr id="2bc2c09f-5758-80b1-aab1-df19e3709f86"><td class="cell-title"><a href="https://www.notion.so/51-Unnerfed-Shukketsu-2bc2c09f575880b1aab1df19e3709f86?pvs=21">51. Unnerfed Shukketsu</a></td><td class="cell-llJE"><a href="https://youtu.be/l6FW7_OxcWc" class="url-value">https://youtu.be/l6FW7_OxcWc</a></td></tr><tr id="2bc2c09f-5758-8032-9829-e40ced76bf3e"><td class="cell-title"><a href="https://www.notion.so/52-Unnerfed-Miletus-2bc2c09f575880329829e40ced76bf3e?pvs=21">52. Unnerfed Miletus</a></td><td class="cell-llJE"><a href="https://youtu.be/EUwIQvsen28" class="url-value">https://youtu.be/EUwIQvsen28</a></td></tr><tr id="2bc2c09f-5758-805f-9165-f9deb1bc6ebf"><td class="cell-title"><a href="https://www.notion.so/53-Unnerfed-Sakupen-Circles-2bc2c09f5758805f9165f9deb1bc6ebf?pvs=21">53. Unnerfed Sakupen Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/WX5RCDxobSA" class="url-value">https://youtu.be/WX5RCDxobSA</a></td></tr><tr id="2bc2c09f-5758-8083-a849-db9653922b06"><td class="cell-title"><a href="https://www.notion.so/54-Unnerfed-WOODKID-2bc2c09f57588083a849db9653922b06?pvs=21">54. Unnerfed WOODKID</a></td><td class="cell-llJE"><a href="https://youtu.be/E63r8Boc7YI" class="url-value">https://youtu.be/E63r8Boc7YI</a></td></tr><tr id="2bc2c09f-5758-8046-b913-fc93582c6b14"><td class="cell-title"><a href="https://www.notion.so/55-Unnerfed-Aquatic-Auroras-2bc2c09f57588046b913fc93582c6b14?pvs=21">55. Unnerfed Aquatic Auroras</a></td><td class="cell-llJE"><a href="https://youtu.be/h1ez8UEgFA8" class="url-value">https://youtu.be/h1ez8UEgFA8</a></td></tr><tr id="2bc2c09f-5758-8000-a3ce-ff52d3f58d61"><td class="cell-title"><a href="https://www.notion.so/56-Unnerfed-Africa-Circles-2bc2c09f57588000a3ceff52d3f58d61?pvs=21">56. Unnerfed Africa Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/PCNeQvfr2k4" class="url-value">https://youtu.be/PCNeQvfr2k4</a></td></tr><tr id="2bc2c09f-5758-8050-a51e-de65d35a2ebf"><td class="cell-title"><a href="https://www.notion.so/57-Unnerfed-Eryx-2bc2c09f57588050a51ede65d35a2ebf?pvs=21">57. Unnerfed Eryx</a></td><td class="cell-llJE"><a href="https://youtu.be/u916PktxuC0" class="url-value">https://youtu.be/u916PktxuC0</a></td></tr><tr id="2bc2c09f-5758-8081-a234-fba1bc31dd31"><td class="cell-title"><a href="https://www.notion.so/58-Unnerfed-Eudemonic-2bc2c09f57588081a234fba1bc31dd31?pvs=21">58. Unnerfed Eudemonic</a></td><td class="cell-llJE"><a href="https://youtu.be/tNR50q4ewWU" class="url-value">https://youtu.be/tNR50q4ewWU</a></td></tr><tr id="2bc2c09f-5758-80b3-997f-f00d24575ad9"><td class="cell-title"><a href="https://www.notion.so/59-Unnerfed-Naurocton-2bc2c09f575880b3997ff00d24575ad9?pvs=21">59. Unnerfed Naurocton</a></td><td class="cell-llJE"><a href="https://youtu.be/ua381fF8rqY" class="url-value">https://youtu.be/ua381fF8rqY</a></td></tr><tr id="2bc2c09f-5758-80a1-b1e2-e0dcd5b2bc5c"><td class="cell-title"><a href="https://www.notion.so/60-Unnerfed-Omega-Interface-2bc2c09f575880a1b1e2e0dcd5b2bc5c?pvs=21">60. Unnerfed Omega Interface</a></td><td class="cell-llJE"><a href="https://youtu.be/jsxaomW8eA4" class="url-value">https://youtu.be/jsxaomW8eA4</a></td></tr><tr id="2bc2c09f-5758-8039-89d8-d7ab9a14534d"><td class="cell-title"><a href="https://www.notion.so/61-Unnerfed-Eltar-2bc2c09f5758803989d8d7ab9a14534d?pvs=21">61. Unnerfed Eltar</a></td><td class="cell-llJE"><a href="https://youtu.be/nNYEETi70uc" class="url-value">https://youtu.be/nNYEETi70uc</a></td></tr><tr id="2bc2c09f-5758-80a1-a9db-ca6480d2145b"><td class="cell-title"><a href="https://www.notion.so/62-Unnerfed-La-Cueva-2bc2c09f575880a1a9dbca6480d2145b?pvs=21">62. Unnerfed La Cueva</a></td><td class="cell-llJE"><a href="https://youtu.be/TuT7R6S5k3w" class="url-value">https://youtu.be/TuT7R6S5k3w</a></td></tr><tr id="2bc2c09f-5758-8064-b6e5-f44f86563733"><td class="cell-title"><a href="https://www.notion.so/63-Unnerfed-Sonic-Wave-Infinity-2bc2c09f57588064b6e5f44f86563733?pvs=21">63. Unnerfed Sonic Wave Infinity</a></td><td class="cell-llJE"><a href="https://youtu.be/QyrTC8tlw9Y" class="url-value">https://youtu.be/QyrTC8tlw9Y</a></td></tr><tr id="2bc2c09f-5758-80fc-aa36-d17774f9ca88"><td class="cell-title"><a href="https://www.notion.so/64-Unnerfed-The-Hell-Origin-2bc2c09f575880fcaa36d17774f9ca88?pvs=21">64. Unnerfed The Hell Origin</a></td><td class="cell-llJE"><a href="https://youtu.be/AGI3_bofW4g" class="url-value">https://youtu.be/AGI3_bofW4g</a></td></tr><tr id="2bc2c09f-5758-800a-b5cd-dd63cf2c9bd3"><td class="cell-title"><a href="https://www.notion.so/65-Unnerfed-Zodiac-2bc2c09f5758800ab5cddd63cf2c9bd3?pvs=21">65. Unnerfed Zodiac</a></td><td class="cell-llJE"><a href="https://youtu.be/rDJNWYLydBk" class="url-value">https://youtu.be/rDJNWYLydBk</a></td></tr><tr id="2bc2c09f-5758-80c6-9968-f4ac2135347c"><td class="cell-title"><a href="https://www.notion.so/66-Unnerfed-Chaoz-Realm-2bc2c09f575880c69968f4ac2135347c?pvs=21">66. Unnerfed Chaoz Realm</a></td><td class="cell-llJE"><a href="https://youtu.be/vBJKBK52s0k" class="url-value">https://youtu.be/vBJKBK52s0k</a></td></tr><tr id="2bc2c09f-5758-8010-9442-dbc94a9f2e4e"><td class="cell-title"><a href="https://www.notion.so/67-Unnerfed-Unknown-2bc2c09f575880109442dbc94a9f2e4e?pvs=21">67. Unnerfed Unknown</a></td><td class="cell-llJE"><a href="https://youtu.be/GBhwmQfdCmQ" class="url-value">https://youtu.be/GBhwmQfdCmQ</a></td></tr><tr id="2bc2c09f-5758-806b-9a0a-d1df9b48b38b"><td class="cell-title"><a href="https://www.notion.so/68-Unnerfed-Silent-Circles-2bc2c09f5758806b9a0ad1df9b48b38b?pvs=21">68. Unnerfed Silent Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/dYR_LIHBh_o" class="url-value">https://youtu.be/dYR_LIHBh_o</a></td></tr><tr id="2bc2c09f-5758-805b-b08b-ce805ea37413"><td class="cell-title"><a href="https://www.notion.so/69-Unnerfed-Fabulous-Fantasy-2bc2c09f5758805bb08bce805ea37413?pvs=21">69. Unnerfed Fabulous Fantasy</a></td><td class="cell-llJE"><a href="https://youtu.be/qdLP5nz_DWY" class="url-value">https://youtu.be/qdLP5nz_DWY</a></td></tr><tr id="2bc2c09f-5758-80a6-b072-e9a3f68463db"><td class="cell-title"><a href="https://www.notion.so/70-Unnerfed-Natural-Disaster-2bc2c09f575880a6b072e9a3f68463db?pvs=21">70. Unnerfed Natural Disaster</a></td><td class="cell-llJE"><a href="https://youtu.be/9PZUn06msKc" class="url-value">https://youtu.be/9PZUn06msKc</a></td></tr><tr id="2bc2c09f-5758-80a2-972f-c2aaf4090ba2"><td class="cell-title"><a href="https://www.notion.so/71-Unnerfed-DOOM-2bc2c09f575880a2972fc2aaf4090ba2?pvs=21">71. Unnerfed DOOM</a></td><td class="cell-llJE"><a href="https://youtu.be/-Bz9OJufPbI" class="url-value">https://youtu.be/-Bz9OJufPbI</a></td></tr><tr id="2bc2c09f-5758-805d-8ed8-e79e70ccfb8e"><td class="cell-title"><a href="https://www.notion.so/72-Unnerfed-Deimos-2bc2c09f5758805d8ed8e79e70ccfb8e?pvs=21">72. Unnerfed Deimos</a></td><td class="cell-llJE"><a href="https://youtu.be/jNGF2sXL4Bg" class="url-value">https://youtu.be/jNGF2sXL4Bg</a></td></tr><tr id="2bc2c09f-5758-801a-897c-f2286d38202a"><td class="cell-title"><a href="https://www.notion.so/73-Unnerfed-Carcosa-2bc2c09f5758801a897cf2286d38202a?pvs=21">73. Unnerfed Carcosa</a></td><td class="cell-llJE"><a href="https://youtu.be/CeLXia6hxqY" class="url-value">https://youtu.be/CeLXia6hxqY</a></td></tr><tr id="2bc2c09f-5758-8085-9239-e69600f4a727"><td class="cell-title"><a href="https://www.notion.so/74-Unnerfed-Innards-2bc2c09f575880859239e69600f4a727?pvs=21">74. Unnerfed Innards</a></td><td class="cell-llJE"><a href="https://youtu.be/AzgEZQYm4Jw" class="url-value">https://youtu.be/AzgEZQYm4Jw</a></td></tr><tr id="2bc2c09f-5758-8060-9abd-d9e14dabe1d2"><td class="cell-title"><a href="https://www.notion.so/75-Unnerfed-Yatagarasu-2bc2c09f575880609abdd9e14dabe1d2?pvs=21">75. Unnerfed Yatagarasu</a></td><td class="cell-llJE"><a href="https://youtu.be/27vg7KzwMNU" class="url-value">https://youtu.be/27vg7KzwMNU</a></td></tr><tr id="2bc2c09f-5758-808c-8bfb-c71fbf7c8176"><td class="cell-title"><a href="https://www.notion.so/76-Unnerfed-Calculator-Core-2bc2c09f5758808c8bfbc71fbf7c8176?pvs=21">76. Unnerfed Calculator Core</a></td><td class="cell-llJE"><a href="https://youtu.be/E4imKFcDaT8" class="url-value">https://youtu.be/E4imKFcDaT8</a></td></tr><tr id="2bc2c09f-5758-8055-adfd-ef6ed0d8056e"><td class="cell-title"><a href="https://www.notion.so/77-Unnerfed-Sary-Never-Clear-2bc2c09f57588055adfdef6ed0d8056e?pvs=21">77. Unnerfed Sary Never Clear</a></td><td class="cell-llJE"><a href="https://youtu.be/-8AEax443_o" class="url-value">https://youtu.be/-8AEax443_o</a></td></tr><tr id="2bc2c09f-5758-80f9-9ed3-ca8ee91467aa"><td class="cell-title"><a href="https://www.notion.so/78-Unnerfed-Forsaken-Hell-2bc2c09f575880f99ed3ca8ee91467aa?pvs=21">78. Unnerfed Forsaken Hell</a></td><td class="cell-llJE"><a href="https://youtu.be/NKyuv8pNlIU" class="url-value">https://youtu.be/NKyuv8pNlIU</a></td></tr><tr id="2bc2c09f-5758-809c-9b4b-c96300a60a17"><td class="cell-title"><a href="https://www.notion.so/79-Unnerfed-Gamma-2bc2c09f5758809c9b4bc96300a60a17?pvs=21">79. Unnerfed Gamma</a></td><td class="cell-llJE"><a href="https://youtu.be/f1XG0vC4RRw" class="url-value">https://youtu.be/f1XG0vC4RRw</a></td></tr><tr id="2bc2c09f-5758-805c-b459-c97bad9fa265"><td class="cell-title"><a href="https://www.notion.so/80-Unnerfed-The-Golden-2bc2c09f5758805cb459c97bad9fa265?pvs=21">80. Unnerfed The Golden</a></td><td class="cell-llJE"><a href="https://youtu.be/Kl-j8gx9Ckk" class="url-value">https://youtu.be/Kl-j8gx9Ckk</a></td></tr><tr id="2bc2c09f-5758-8006-a6c8-ec7b892855b6"><td class="cell-title"><a href="https://www.notion.so/81-Unnerfed-Fragile-2bc2c09f57588006a6c8ec7b892855b6?pvs=21">81. Unnerfed Fragile</a></td><td class="cell-llJE"><a href="https://youtu.be/M3cg6A54jzs" class="url-value">https://youtu.be/M3cg6A54jzs</a></td></tr><tr id="2bc2c09f-5758-80fd-a754-f065a2623a7f"><td class="cell-title"><a href="https://www.notion.so/82-Unnerfed-Tenkai-2bc2c09f575880fda754f065a2623a7f?pvs=21">82. Unnerfed Tenkai</a></td><td class="cell-llJE"><a href="https://youtu.be/NIR_XxB-DRw" class="url-value">https://youtu.be/NIR_XxB-DRw</a></td></tr><tr id="2bc2c09f-5758-80ca-870b-c6ba53c26a4e"><td class="cell-title"><a href="https://www.notion.so/83-Unnerfed-cliffHell-castle-99-2bc2c09f575880ca870bc6ba53c26a4e?pvs=21">83. Unnerfed cliffHell castle 99</a></td><td class="cell-llJE"><a href="https://youtu.be/BlnDhCKwXOU" class="url-value">https://youtu.be/BlnDhCKwXOU</a></td></tr><tr id="2bc2c09f-5758-80b1-9ede-fe6b9783a7fd"><td class="cell-title"><a href="https://www.notion.so/84-Unnerfed-Theory-of-Darkness-2bc2c09f575880b19edefe6b9783a7fd?pvs=21">84. Unnerfed Theory of Darkness</a></td><td class="cell-llJE"><a href="https://youtu.be/io11u-GLJkM" class="url-value">https://youtu.be/io11u-GLJkM</a></td></tr><tr id="2bc2c09f-5758-80b8-92de-f72fcbb94296"><td class="cell-title"><a href="https://www.notion.so/85-Unnerfed-Dimensional-Galaxy-2bc2c09f575880b892def72fcbb94296?pvs=21">85. Unnerfed Dimensional Galaxy</a></td><td class="cell-llJE"><a href="https://youtu.be/m-I8cvm6Qds" class="url-value">https://youtu.be/m-I8cvm6Qds</a></td></tr><tr id="2bc2c09f-5758-809b-b6ca-db1984cae584"><td class="cell-title"><a href="https://www.notion.so/86-Unnerfed-Blade-of-Justice-2bc2c09f5758809bb6cadb1984cae584?pvs=21">86. Unnerfed Blade of Justice</a></td><td class="cell-llJE"><a href="https://youtu.be/Ctcn-rWrPVs" class="url-value">https://youtu.be/Ctcn-rWrPVs</a></td></tr><tr id="2bc2c09f-5758-801a-97ea-f8fc581c2265"><td class="cell-title"><a href="https://www.notion.so/87-Unnerfed-Forever-Asleep-2bc2c09f5758801a97eaf8fc581c2265?pvs=21">87. Unnerfed Forever Asleep</a></td><td class="cell-llJE"><a href="https://youtu.be/s5oph7jd6qU" class="url-value">https://youtu.be/s5oph7jd6qU</a></td></tr><tr id="2bc2c09f-5758-80fe-bb45-eed9f9d5e777"><td class="cell-title"><a href="https://www.notion.so/88-Unnerfed-Super-Probably-Level-2bc2c09f575880febb45eed9f9d5e777?pvs=21">88. Unnerfed Super Probably Level</a></td><td class="cell-llJE"><a href="https://youtu.be/VhaPdQncUCM" class="url-value">https://youtu.be/VhaPdQncUCM</a></td></tr><tr id="2bc2c09f-5758-801e-8422-fee6a7b9c01f"><td class="cell-title"><a href="https://www.notion.so/89-Unnerfed-Visible-Ray-2bc2c09f5758801e8422fee6a7b9c01f?pvs=21">89. Unnerfed Visible Ray</a></td><td class="cell-llJE"><a href="https://youtu.be/Odrwj2wHzyU" class="url-value">https://youtu.be/Odrwj2wHzyU</a></td></tr><tr id="2bc2c09f-5758-8016-aa10-f085d31610f1"><td class="cell-title"><a href="https://www.notion.so/90-Unnerfed-Mirrored-Calamity-2bc2c09f57588016aa10f085d31610f1?pvs=21">90. Unnerfed Mirrored Calamity</a></td><td class="cell-llJE"><a href="https://youtu.be/PQNLBKKvdwc" class="url-value">https://youtu.be/PQNLBKKvdwc</a></td></tr><tr id="2bc2c09f-5758-8014-8f09-e915cbd5de9f"><td class="cell-title"><a href="https://www.notion.so/91-Unnerfed-Esfera-2bc2c09f575880148f09e915cbd5de9f?pvs=21">91. Unnerfed Esfera</a></td><td class="cell-llJE"><a href="https://youtu.be/LRMzs259Gr0" class="url-value">https://youtu.be/LRMzs259Gr0</a></td></tr><tr id="2bc2c09f-5758-8005-ad71-d45c7b3daedf"><td class="cell-title"><a href="https://www.notion.so/92-Unnerfed-Devils-Playground-2bc2c09f57588005ad71d45c7b3daedf?pvs=21">92. Unnerfed Devils Playground</a></td><td class="cell-llJE"><a href="https://youtu.be/oxCx2uzZwYs" class="url-value">https://youtu.be/oxCx2uzZwYs</a></td></tr><tr id="2bc2c09f-5758-8051-9a01-c5a984c5c2ae"><td class="cell-title"><a href="https://www.notion.so/93-Unnerfed-Underneath-2bc2c09f575880519a01c5a984c5c2ae?pvs=21">93. Unnerfed Underneath</a></td><td class="cell-llJE"><a href="https://youtu.be/AkuFDzufRD8" class="url-value">https://youtu.be/AkuFDzufRD8</a></td></tr><tr id="2bc2c09f-5758-8057-be6d-e1cfff7fc540"><td class="cell-title"><a href="https://www.notion.so/94-Unnerfed-Titan-Complex-2bc2c09f57588057be6de1cfff7fc540?pvs=21">94. Unnerfed Titan Complex</a></td><td class="cell-llJE"><a href="https://youtu.be/B0wXIX0CHPg" class="url-value">https://youtu.be/B0wXIX0CHPg</a></td></tr><tr id="2bc2c09f-5758-80ca-90a8-e6ce31151f57"><td class="cell-title"><a href="https://www.notion.so/95-Unnerfed-Mystical-2bc2c09f575880ca90a8e6ce31151f57?pvs=21">95. Unnerfed Mystical</a></td><td class="cell-llJE"><a href="https://youtu.be/PVCdVui0syc" class="url-value">https://youtu.be/PVCdVui0syc</a></td></tr><tr id="2bc2c09f-5758-80dd-8342-d80217fd0807"><td class="cell-title"><a href="https://www.notion.so/96-Unnerfed-The-Yandere-2bc2c09f575880dd8342d80217fd0807?pvs=21">96. Unnerfed The Yandere </a></td><td class="cell-llJE"><a href="https://youtu.be/iNJ8hd-JrUw" class="url-value">https://youtu.be/iNJ8hd-JrUw</a></td></tr><tr id="2bc2c09f-5758-80e9-be27-f70c9398540e"><td class="cell-title"><a href="https://www.notion.so/97-Unnerfed-Ragnarok-2bc2c09f575880e9be27f70c9398540e?pvs=21">97. Unnerfed Ragnarok</a></td><td class="cell-llJE"><a href="https://youtu.be/a1q8a9mNKp0" class="url-value">https://youtu.be/a1q8a9mNKp0</a></td></tr><tr id="2bc2c09f-5758-801d-a751-ce7a54de7fed"><td class="cell-title"><a href="https://www.notion.so/98-Unnerfed-Black-Blizzard-2bc2c09f5758801da751ce7a54de7fed?pvs=21">98. Unnerfed Black Blizzard</a></td><td class="cell-llJE"><a href="https://youtu.be/OI_jIJGhlC0" class="url-value">https://youtu.be/OI_jIJGhlC0</a></td></tr><tr id="2bc2c09f-5758-80a8-9e6e-e589b4779607"><td class="cell-title"><a href="https://www.notion.so/99-Unnerfed-The-Last-Phantasm-2bc2c09f575880a89e6ee589b4779607?pvs=21">99. Unnerfed The Last Phantasm</a></td><td class="cell-llJE"><a href="https://youtu.be/ZWKfUPwES2M" class="url-value">https://youtu.be/ZWKfUPwES2M</a></td></tr><tr id="2bc2c09f-5758-80a0-8862-c70775f11820"><td class="cell-title"><a href="https://www.notion.so/100-Unnerfed-Endemonic-2bc2c09f575880a08862c70775f11820?pvs=21">100. Unnerfed Endemonic</a></td><td class="cell-llJE"><a href="https://youtu.be/2PPXkiS4y1M" class="url-value">https://youtu.be/2PPXkiS4y1M</a></td></tr><tr id="2bc2c09f-5758-80fd-abff-ffadddab9d4c"><td class="cell-title"><a href="https://www.notion.so/101-Unnerfed-Sound-Wave-Destroyer-2bc2c09f575880fdabffffadddab9d4c?pvs=21">101. Unnerfed Sound Wave Destroyer</a></td><td class="cell-llJE"><a href="https://youtu.be/2nIfz5Gf5lM" class="url-value">https://youtu.be/2nIfz5Gf5lM</a></td></tr><tr id="2be2c09f-5758-8031-bcae-e0887087b83d"><td class="cell-title"><a href="https://www.notion.so/102-Unnerfed-Dark-Maze-2be2c09f57588031bcaee0887087b83d?pvs=21">102. Unnerfed Dark Maze</a></td><td class="cell-llJE"><a href="https://youtu.be/N2PmJy-w7ec" class="url-value">https://youtu.be/N2PmJy-w7ec</a></td></tr><tr id="2be2c09f-5758-8080-8e6a-f14559c2acd8"><td class="cell-title"><a href="https://www.notion.so/103-Unnerfed-Infinite-Iniquity-2be2c09f575880808e6af14559c2acd8?pvs=21">103. Unnerfed Infinite Iniquity</a></td><td class="cell-llJE"><a href="https://youtu.be/vQ-4HZWLh4M" class="url-value">https://youtu.be/vQ-4HZWLh4M</a></td></tr><tr id="2be2c09f-5758-804d-b0d8-fbe5dc7f2f4e"><td class="cell-title"><a href="https://www.notion.so/104-Unnerfed-SubSonic-2be2c09f5758804db0d8fbe5dc7f2f4e?pvs=21">104. Unnerfed SubSonic</a></td><td class="cell-llJE"><a href="https://youtu.be/QbHUyWHFUU0" class="url-value">https://youtu.be/QbHUyWHFUU0</a></td></tr><tr id="2be2c09f-5758-8019-9f1b-cf7ddfe25942"><td class="cell-title"><a href="https://www.notion.so/105-Unnerfed-Silent-Club-2be2c09f575880199f1bcf7ddfe25942?pvs=21">105. Unnerfed Silent Club</a></td><td class="cell-llJE"><a href="https://youtu.be/YxWjLleSYXg" class="url-value">https://youtu.be/YxWjLleSYXg</a></td></tr><tr id="2be2c09f-5758-804e-86df-cce0f7303168"><td class="cell-title"><a href="https://www.notion.so/106-Unnerfed-Refraction-2be2c09f5758804e86dfcce0f7303168?pvs=21">106. Unnerfed Refraction</a></td><td class="cell-llJE"><a href="https://youtu.be/Xex0iGuhzKg" class="url-value">https://youtu.be/Xex0iGuhzKg</a></td></tr><tr id="2be2c09f-5758-8080-81d9-d7e68494a159"><td class="cell-title"><a href="https://www.notion.so/107-Unnerfed-Requiem-2be2c09f5758808081d9d7e68494a159?pvs=21">107. Unnerfed Requiem</a></td><td class="cell-llJE"><a href="https://youtu.be/ASIbjob-ITk" class="url-value">https://youtu.be/ASIbjob-ITk</a></td></tr><tr id="2be2c09f-5758-80e2-b649-c5fc09ef11b8"><td class="cell-title"><a href="https://www.notion.so/108-Unnerfed-Karasu-2be2c09f575880e2b649c5fc09ef11b8?pvs=21">108. Unnerfed Karasu</a></td><td class="cell-llJE"><a href="https://youtu.be/73-OOOuB8ns" class="url-value">https://youtu.be/73-OOOuB8ns</a></td></tr><tr id="2be2c09f-5758-80ef-b9e9-dc502d73504c"><td class="cell-title"><a href="https://www.notion.so/109-Unnerfed-Stereo-Demoness-2be2c09f575880efb9e9dc502d73504c?pvs=21">109. Unnerfed Stereo Demoness</a></td><td class="cell-llJE"><a href="https://youtu.be/IgQDgQo3rts" class="url-value">https://youtu.be/IgQDgQo3rts</a></td></tr><tr id="2be2c09f-5758-80e0-8857-f733e6d9dde4"><td class="cell-title"><a href="https://www.notion.so/110-Unnerfed-Death-Corridor-2be2c09f575880e08857f733e6d9dde4?pvs=21">110. Unnerfed Death Corridor</a></td><td class="cell-llJE"><a href="https://youtu.be/PywGne-s72Y" class="url-value">https://youtu.be/PywGne-s72Y</a></td></tr><tr id="2be2c09f-5758-80ab-ba59-f940ba011c4d"><td class="cell-title"><a href="https://www.notion.so/111-Unnerfed-The-Hell-2be2c09f575880abba59f940ba011c4d?pvs=21">111. Unnerfed The Hell</a></td><td class="cell-llJE"><a href="https://youtu.be/e6LoMAURyl4" class="url-value">https://youtu.be/e6LoMAURyl4</a></td></tr><tr id="2be2c09f-5758-8019-be36-e7c0fc9c433d"><td class="cell-title"><a href="https://www.notion.so/112-Unnerfed-Conical-Depression-X-2be2c09f57588019be36e7c0fc9c433d?pvs=21">112. Unnerfed Conical Depression X</a></td><td class="cell-llJE"><a href="https://youtu.be/gdrfrzRiMOs" class="url-value">https://youtu.be/gdrfrzRiMOs</a></td></tr><tr id="2be2c09f-5758-8073-8b10-d56efe9c9143"><td class="cell-title"><a href="https://www.notion.so/113-Unnerfed-Core-Z-2be2c09f575880738b10d56efe9c9143?pvs=21">113. Unnerfed Core Z</a></td><td class="cell-llJE"><a href="https://youtu.be/oRMJ8gTCHP8" class="url-value">https://youtu.be/oRMJ8gTCHP8</a></td></tr><tr id="2be2c09f-5758-800e-8a66-cddc311a2bd2"><td class="cell-title"><a href="https://www.notion.so/114-Unnerfed-Sakupen-Hell-2be2c09f5758800e8a66cddc311a2bd2?pvs=21">114. Unnerfed Sakupen Hell</a></td><td class="cell-llJE"><a href="https://youtu.be/iTWNVlo3dVs" class="url-value">https://youtu.be/iTWNVlo3dVs</a></td></tr><tr id="2be2c09f-5758-80c4-b135-f4ccde1c111c"><td class="cell-title"><a href="https://www.notion.so/115-Unnerfed-Divine-Ray-II-2be2c09f575880c4b135f4ccde1c111c?pvs=21">115. Unnerfed Divine Ray II</a></td><td class="cell-llJE"><a href="https://youtu.be/mwb0NX63Qp0" class="url-value">https://youtu.be/mwb0NX63Qp0</a></td></tr><tr id="2be2c09f-5758-80af-a325-ca17533fbe89"><td class="cell-title"><a href="https://www.notion.so/116-Unnerfed-River-Twygz-2be2c09f575880afa325ca17533fbe89?pvs=21">116. Unnerfed River Twygz</a></td><td class="cell-llJE"><a href="https://youtu.be/qOfdyxuK7kk" class="url-value">https://youtu.be/qOfdyxuK7kk</a></td></tr><tr id="2be2c09f-5758-8017-90c0-fdf9e1e6dafa"><td class="cell-title"><a href="https://www.notion.so/117-Unnerfed-Phobos-2be2c09f5758801790c0fdf9e1e6dafa?pvs=21">117. Unnerfed Phobos</a></td><td class="cell-llJE"><a href="https://youtu.be/rQqASAvfUfw" class="url-value">https://youtu.be/rQqASAvfUfw</a></td></tr><tr id="2be2c09f-5758-80aa-8725-e8bfedb2bf1c"><td class="cell-title"><a href="https://www.notion.so/118-Unnerfed-Meow-Circles-2be2c09f575880aa8725e8bfedb2bf1c?pvs=21">118. Unnerfed Meow Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/LNyWYtbcwjk" class="url-value">https://youtu.be/LNyWYtbcwjk</a></td></tr><tr id="2be2c09f-5758-800f-af5a-e0d178c127a0"><td class="cell-title"><a href="https://www.notion.so/119-Unnerfed-Cadrega-City-2be2c09f5758800faf5ae0d178c127a0?pvs=21">119. Unnerfed Cadrega City</a></td><td class="cell-llJE"><a href="https://youtu.be/4utOFVyIYPQ" class="url-value">https://youtu.be/4utOFVyIYPQ</a></td></tr><tr id="2be2c09f-5758-80d1-bbd3-f1036d3eb029"><td class="cell-title"><a href="https://www.notion.so/120-Unnerfed-Poltergeist-Reborn-2be2c09f575880d1bbd3f1036d3eb029?pvs=21">120. Unnerfed Poltergeist Reborn</a></td><td class="cell-llJE"><a href="https://youtu.be/DwWQErtCDUk" class="url-value">https://youtu.be/DwWQErtCDUk</a></td></tr><tr id="2be2c09f-5758-80c1-8a10-d270a0aade35"><td class="cell-title"><a href="https://www.notion.so/121-Unnerfed-The-Hell-Zone-2be2c09f575880c18a10d270a0aade35?pvs=21">121. Unnerfed The Hell Zone</a></td><td class="cell-llJE"><a href="https://youtu.be/jExp0HCURDY" class="url-value">https://youtu.be/jExp0HCURDY</a></td></tr><tr id="2be2c09f-5758-80b3-8607-e769618b90c4"><td class="cell-title"><a href="https://www.notion.so/122-Unnerfed-Deadly-Clubstep-V2-2be2c09f575880b38607e769618b90c4?pvs=21">122. Unnerfed Deadly Clubstep V2</a></td><td class="cell-llJE"><a href="https://youtu.be/pEmLj2X5Hzs" class="url-value">https://youtu.be/pEmLj2X5Hzs</a></td></tr><tr id="2be2c09f-5758-80d1-8fb3-f289abe9181f"><td class="cell-title"><a href="https://www.notion.so/123-Unnerfed-Inner-Hell-2be2c09f575880d18fb3f289abe9181f?pvs=21">123. Unnerfed Inner Hell</a></td><td class="cell-llJE"><a href="https://youtu.be/5TbECT67jR0" class="url-value">https://youtu.be/5TbECT67jR0</a></td></tr><tr id="2be2c09f-5758-80ac-acbd-f52a0a2c660e"><td class="cell-title"><a href="https://www.notion.so/124-Unnerfed-Mujigae-2be2c09f575880acacbdf52a0a2c660e?pvs=21">124. Unnerfed Mujigae</a></td><td class="cell-llJE"><a href="https://youtu.be/MDYEH3njHyc" class="url-value">https://youtu.be/MDYEH3njHyc</a></td></tr><tr id="2be2c09f-5758-80d8-b6fb-c9461da2f1bb"><td class="cell-title"><a href="https://www.notion.so/125-Unnerfed-Serpent-Vortex-2be2c09f575880d8b6fbc9461da2f1bb?pvs=21">125. Unnerfed Serpent Vortex</a></td><td class="cell-llJE"><a href="https://youtu.be/-z7cT7RnxDI" class="url-value">https://youtu.be/-z7cT7RnxDI</a></td></tr><tr id="2be2c09f-5758-8010-b13d-cc0ee1bdd745"><td class="cell-title"><a href="https://www.notion.so/126-Unnerfed-DoomsDay-2be2c09f57588010b13dcc0ee1bdd745?pvs=21">126. Unnerfed DoomsDay</a></td><td class="cell-llJE"><a href="https://youtu.be/uoDJlDBoQ8E" class="url-value">https://youtu.be/uoDJlDBoQ8E</a></td></tr><tr id="2be2c09f-5758-80ee-87bc-f6cc675da1b7"><td class="cell-title"><a href="https://www.notion.so/127-Unnerfed-Back-on-Mountain-2be2c09f575880ee87bcf6cc675da1b7?pvs=21">127. Unnerfed Back on Mountain</a></td><td class="cell-llJE"><a href="https://youtu.be/HRbWccuvQ0c" class="url-value">https://youtu.be/HRbWccuvQ0c</a></td></tr><tr id="2be2c09f-5758-80ae-8eb2-df87d5185ebb"><td class="cell-title"><a href="https://www.notion.so/128-Unnerfed-Angelic-Blood-2be2c09f575880ae8eb2df87d5185ebb?pvs=21">128. Unnerfed Angelic Blood</a></td><td class="cell-llJE"><a href="https://youtu.be/y2kx-5-yhoE" class="url-value">https://youtu.be/y2kx-5-yhoE</a></td></tr><tr id="2be2c09f-5758-8051-967d-ca839dc1272d"><td class="cell-title"><a href="https://www.notion.so/129-Unnerfed-The-Ultimate-Phase-2be2c09f57588051967dca839dc1272d?pvs=21">129. Unnerfed The Ultimate Phase</a></td><td class="cell-llJE"><a href="https://youtu.be/KDNwEphCvyQ" class="url-value">https://youtu.be/KDNwEphCvyQ</a></td></tr><tr id="2be2c09f-5758-80c4-a8ac-f5c9b6f079e7"><td class="cell-title"><a href="https://www.notion.so/130-Unnerfed-Hatred-2be2c09f575880c4a8acf5c9b6f079e7?pvs=21">130. Unnerfed Hatred</a></td><td class="cell-llJE"><a href="https://youtu.be/w-OBneAkHBE" class="url-value">https://youtu.be/w-OBneAkHBE</a></td></tr><tr id="2be2c09f-5758-806f-8b2c-e1f1d92af34c"><td class="cell-title"><a href="https://www.notion.so/131-Unnerfed-Deadly-Hexagon-Force-2be2c09f5758806f8b2ce1f1d92af34c?pvs=21">131. Unnerfed Deadly Hexagon Force</a></td><td class="cell-llJE"><a href="https://youtu.be/9J2r7eNtzhM" class="url-value">https://youtu.be/9J2r7eNtzhM</a></td></tr><tr id="2be2c09f-5758-8059-8f13-c515bdcfe082"><td class="cell-title"><a href="https://www.notion.so/132-Unnerfed-DeathsGate-2be2c09f575880598f13c515bdcfe082?pvs=21">132. Unnerfed DeathsGate</a></td><td class="cell-llJE"><a href="https://youtu.be/wnHaikxlWWs" class="url-value">https://youtu.be/wnHaikxlWWs</a></td></tr><tr id="2be2c09f-5758-8000-a679-dacd72fc3be8"><td class="cell-title"><a href="https://www.notion.so/133-Unnerfed-Paracosm-Circles-2be2c09f57588000a679dacd72fc3be8?pvs=21">133. Unnerfed Paracosm Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/OqS81bW7IJc" class="url-value">https://youtu.be/OqS81bW7IJc</a></td></tr><tr id="2be2c09f-5758-80d7-8833-ceab556887b8"><td class="cell-title"><a href="https://www.notion.so/134-Unnerfed-Arcane-Ademption-2be2c09f575880d78833ceab556887b8?pvs=21">134. Unnerfed Arcane Ademption</a></td><td class="cell-llJE"><a href="https://youtu.be/pCkXcZjIHHU" class="url-value">https://youtu.be/pCkXcZjIHHU</a></td></tr><tr id="2be2c09f-5758-8023-9c76-f8b4500145f4"><td class="cell-title"><a href="https://www.notion.so/135-Unnerfed-Deadly-Cataclysm-2be2c09f575880239c76f8b4500145f4?pvs=21">135. Unnerfed Deadly Cataclysm</a></td><td class="cell-llJE"><a href="https://youtu.be/DkO8YugMIqI" class="url-value">https://youtu.be/DkO8YugMIqI</a></td></tr><tr id="2be2c09f-5758-80a9-a69a-e9a90b8606f0"><td class="cell-title"><a href="https://www.notion.so/136-Unnerfed-Future-Demoness-2be2c09f575880a9a69ae9a90b8606f0?pvs=21">136. Unnerfed Future Demoness</a></td><td class="cell-llJE"><a href="https://youtu.be/5QXVqg4R-Rg" class="url-value">https://youtu.be/5QXVqg4R-Rg</a></td></tr><tr id="2be2c09f-5758-80f1-8e8c-d255d9ce980d"><td class="cell-title"><a href="https://www.notion.so/137-Unnerfed-Madhouse-2be2c09f575880f18e8cd255d9ce980d?pvs=21">137. Unnerfed Madhouse</a></td><td class="cell-llJE"><a href="https://youtu.be/czgVbLy9dQ4" class="url-value">https://youtu.be/czgVbLy9dQ4</a></td></tr><tr id="2be2c09f-5758-80a0-a81f-c079f4295771"><td class="cell-title"><a href="https://www.notion.so/138-Unnerfed-Supersonic-2be2c09f575880a0a81fc079f4295771?pvs=21">138. Unnerfed Supersonic</a></td><td class="cell-llJE"><a href="https://youtu.be/xSLjzT-bCWA" class="url-value">https://youtu.be/xSLjzT-bCWA</a></td></tr><tr id="2be2c09f-5758-8040-9ecc-f64c2c668127"><td class="cell-title"><a href="https://www.notion.so/139-Unnerfed-Planet-Circles-2be2c09f575880409eccf64c2c668127?pvs=21">139. Unnerfed Planet Circles</a></td><td class="cell-llJE"><a href="https://youtu.be/bsAQ0kNLdzQ" class="url-value">https://youtu.be/bsAQ0kNLdzQ</a></td></tr><tr id="2be2c09f-5758-805c-ab1a-fcb235beadc4"><td class="cell-title"><a href="https://www.notion.so/140-Unnerfed-Neonic-Dreamland-2be2c09f5758805cab1afcb235beadc4?pvs=21">140. Unnerfed Neonic Dreamland</a></td><td class="cell-llJE"><a href="https://youtu.be/hZ7GbdQSqO4" class="url-value">https://youtu.be/hZ7GbdQSqO4</a></td></tr><tr id="2be2c09f-5758-80c9-9d07-c08f37e742fc"><td class="cell-title"><a href="https://www.notion.so/141-Unnerfed-Apologiest-2be2c09f575880c99d07c08f37e742fc?pvs=21">141. Unnerfed Apologiest</a></td><td class="cell-llJE"><a href="https://youtu.be/cta8aGfak6k" class="url-value">https://youtu.be/cta8aGfak6k</a></td></tr><tr id="2be2c09f-5758-809a-96fd-c9259585afdb"><td class="cell-title"><a href="https://www.notion.so/142-Unnerfed-Silent-Hill-v2-2be2c09f5758809a96fdc9259585afdb?pvs=21">142. Unnerfed Silent Hill v2</a></td><td class="cell-llJE"><a href="https://youtu.be/cBrCUcrBgxQ" class="url-value">https://youtu.be/cBrCUcrBgxQ</a></td></tr><tr id="2be2c09f-5758-801e-868c-cc47f515f6c9"><td class="cell-title"><a href="https://www.notion.so/143-Unnerfed-Gloomy-City-2be2c09f5758801e868ccc47f515f6c9?pvs=21">143. Unnerfed Gloomy City</a></td><td class="cell-llJE"><a href="https://youtu.be/JtLqgKYP2Q0" class="url-value">https://youtu.be/JtLqgKYP2Q0</a></td></tr><tr id="2be2c09f-5758-807e-8731-cb7b41c49637"><td class="cell-title"><a href="https://www.notion.so/144-Unnerfed-Treasure-Mine-2be2c09f5758807e8731cb7b41c49637?pvs=21">144. Unnerfed Treasure Mine</a></td><td class="cell-llJE"><a href="https://youtu.be/-UvEOQXTUqM" class="url-value">https://youtu.be/-UvEOQXTUqM</a></td></tr></tbody></table><br/><br/></div><p id="2be2c09f-5758-8004-8ec4-c1d5cccab9d0" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
